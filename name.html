@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <!--<div id="output">
+        <li>How many regions are in Tazania</li>
+        <li>How many number of legs do you have</li>
+        <li>How Old are you?</li>
+        <li>How many presidents rulled Tanzania country</li>
+        <li>Give the name of University</li>
+        <li>How many months do we have in one and half year</li>
+        <li>First president name of Tanzania</li>
+    </div>-->
+    <script>
+    /*Program which print in order
+var questions= 3;
+var questionleft='['+ questions+'questions left]';
+var adjacent=prompt("type your answer"+questionleft);
+questions-=1;
+questionleft='['+ questions+'questions left]';
+var noun=prompt('Enter the noun'+questionleft);
+questions-=1;
+questionleft='['+ questions+'questions left]';
+var verb=prompt('Enter the verb'+questionleft);
+alert('All done.Ready for message');
+var sentence="there was a" +adjacent
+sentence+='programer want to use java script to '+verb;
+sentence+='the '+noun;
+document.write("sentence");*/
+/*
+==program to print the bbetween number in random order===
+var input1=prompt("please enter the starting number");
+var bottomNumber=parseInt(input1);
+var input=prompt("enter the top number");
+var toNnumber=parseInt(input);
+var randomNumber=Math.floor(Math.random()*(topNumber-bottomNumber)+1)+bottomNumber;
+var message=randomNumber +"is number between" + bottomNumber+"and"+topNumber+"and" +topNumber;
+document.write(message);
+*/
+/* logical statements */
+//var answer=prompt("enter the name of the university");
+//if(answer.toUpperCase()/*receive all cases*/=='MAMA'){
+  //  document.write("<p> Name is correctly</p>");
+//}else{
+  //  document.write("Name is not correctly, check the spelling");
+//}
+//using operators in th program
+/*var number=Math.random(Math.random()*6)+1;
+var gues=prompt("enter the number to guess");
+if(parseInt(gues)===number){
+    document.write("You are guruu Master");
+}else{
+    document.write("THe number you entered don't match");
+}
+// asking the questions
+var correct=0;
+var answer1=prompt('What language used to make style?');
+if(answer1.toUpperCase==='CSS');
+{
+    correct+=1;
+}
+var answer2=prompt('What language used to make frontpage?');
+if(answer2.toUpperCase==='HTML');
+{
+    correct+=1;
+}
+var answer3=prompt('What language used to make attractive?');
+if(answer3.toUpperCase==='JAVASCRIPT');
+{
+    correct+=1;
+}
+var answer4=prompt('What language used to make database?');
+if(answer4.toUpperCase==='MSQL');
+{
+    correct+=1;
+}
+document.write("You got"+correct+"out of four choices");
+if(correct==4){
+    document.write("You earned a gold arrow!");
+}else if(correct===3){
+    document.write("You earned a silver arrow!");
+}else
+{
+    document.write("You earned a wood arrow!");
+}*/
+
+
+//function in javascript
+/*function nyallah(){
+    var nyallah=Math.floor(Math.random()*6)+2;
+    alert(nyallah);
+}
+for(var i=1;i<10;i++)
+nyallah();// number of calling the function will print according to number of calling the function*/
+/*==to generate the rondomly number==/
+function getrondomnumber(lower, upper){
+    if(isNaN(lower)||isNaN(upper)){
+        throw new Error('both arguments are not true');
+        
+    }
+    return Math.floor(Math.random()*upper)+lower;
+}
+console.log(getrondomnumber(1,6));
+console.log(getrondomnumber('ten',62));
+console.log(getrondomnumber(11,'number two'));
+console.log(getrondomnumber(12,689));
+console.log(getrondomnumber(100,6000));
+function number(upper){
+    return Math.floor(Math.random())+10;
+}*/
+/* while roop==
+var value=0;
+while(value<60){
+    document.write(value+ "    ");
+    value+=1;
+}*/
+/* for loop*/
+/*var html='';
+var rgbColor;
+function numberRGB(){
+    return Math.floor(Math.random()*256);
+}
+function randomColor(){
+    var color='rgb(';
+    color+=numberRGB()+',';
+    color+=numberRGB()+',';
+    color+=numberRGB()+')';
+    return color;
+
+}
+function print(massage){
+    document.write(massage);
+}
+for(var i=1;i<10;i+=1){
+    rgbColor=randomColor();
+    html+='<div style ="background-color:'+rgbColor+'"></div>';
+    
+}
+print(html);*/
+/*var playlist=[];
+playlist.push('Dodo by Alikiba');
+playlist.push('mpaka kesho by harmnize','number one by Diamond','Tamba by Mbosso');
+playlist.push('Rich gang by Rick Ross','One more night by Harmonize ft Ibrah_tz');
+playlist.unshift('Nyallah the King');
+playlist.join(',');
+console.log(playlist);
+
+var nyallah=[[1,2,3,4,5],[6,7,8,9,10],[3,4,8,10,23]];
+console.log(nyallah);*/
+//creating simple quiz challenge
+/*var questions=[ ['How many regions are in Tazania', 24], 
+['How many number of legs do you have',2],
+['How Old are you?',24],
+['How many presidents rulled Tanzania country',5],
+['Give the name of University','UDSM'],
+['How many months do we have in one and half year',18],
+['First president name of Tanzania(full name)','Julius Kambarage Nyerere']
+];
+var correctAnswers =0;
+var question;
+var answer;
+var response;
+var HTML;
+var correct=[];
+var wrong=[];
+
+function print(massage){
+    var outputDiv=document.getElementById('output');
+    outputDiv.innerHTML =massage;
+}
+function buildList(arr){
+    var listHTML= '<ol>';
+    for(var i=0; i<arr.length;i++){
+        listHTML +='<li>'+arr[i]+'</li>';
+    }
+    listHTML +='</ol>';
+    return listHTML;
+}
+
+for(var i=0;i<questions.length;i++){
+    question=questions[i][0];
+    answer=questions[i][1];
+    response=parseInt(prompt(question));
+    //response=parseInt(response);
+    if(response==answer){
+        correctAnswers +=1;
+        correct.push(question);
+    }else{
+        wrong.push(question);
+    }
+
+}
+HTML= 'You got  '+correctAnswers+'  question(s) right';
+HTML +='<strong><br><br><h>You got these qusestions correctly</strong>:</h>';
+HTML +=buildList(correct);
+HTML +='<strong><h>You got these qusestions wrong:</h></strong>';
+HTML +=buildList(wrong);
+print(HTML);
+
+var person={
+name: 'Nyallah Njigilwa',
+age: 23+' years old',
+natinality: 'Tanzania',
+skills: ['html  ',' CSS   ',' JavaScript   ',' C  ',' Java   ']
+}
+
+var massage=' My name is '+person.name;
+massage+= ',  I live in '+person.natinality;
+massage+= ' , am '+person.age;
+massage+= '  and Finally I have '+person.skills.length +' skills in programming language in ';
+massage+=person.skills;
+alert(massage);*/
+alert("Soma maelekezo kabla ya kujibu")
+
+//Qn 1
+var me= prompt("How many presdents in  Tanzania passed away?");
+if(me==2){
+    alert("You got correct answer");
+}
+else {
+    alert("You got wrong answer");
+}
+
+//Qn 2
+var mem= prompt("How many continents in  Tanzania?");
+if(mem==0 ||me=='Nothing'){
+    alert("You got correct answer");
+}
+else {
+    alert("You got wrong answer");
+}
+
+//Qn 3
+var me= prompt("How many girlfriends you have?");
+if(me==1||me==0){
+    alert("You have kingdom of Jah");
+}
+else {
+    alert("You is Member of Satan");
+}
+//Qn 4
+var me= prompt("Matusi Mangapi umetukana leo?");
+if(me==0){
+    alert("Endelea na Moyo wa hivyo");
+}
+else{
+    alert("Jumapili Ukatubu");
+}
+//Qn 5
+var me= prompt("Umefata Chet Kabungu?");
+if(me=='Yes'||me=='YES'||me=='YEAP'||me=='yeap'||me=='yes'){
+    alert("Mbona ulienda kimya bila kusema?");
+}
+else {
+    alert("Utafata Lini Twende Wote?");
+}
+//Qn 6
+var me= prompt("Ndevu Unazo?");
+if(me=='Yes'||me=='YES'||me=='YEAP'||me=='yeap'||me=='yes'){
+    alert("Kwanini Bado unakaa kwenu?");
+}
+else {
+    alert("Lini zinatoka ??");
+}
+//Qn 7
+var me= prompt("How many years you are studying at University?");
+if(me==4){
+    alert("Mwaka 2023 kumbe unamaliza");
+}
+else if(me==3){
+    alert("Tangulia Mtaani ukaandae Mkao mzee");
+}else{
+    alert("Unasomea Nini hicho mzee?");
+}
+
+alert("Created BY Eng; Nyallah from University of Dar Es Salaam");
+
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>
